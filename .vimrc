@@ -1,15 +1,23 @@
+" Use tree view.
+let g:netrw_liststyle = 3
+
+" Configure lightline.
+set laststatus=2
+let g:lightline = {}  
+let g:lightline.colorscheme = 'hybrid'
+
 set t_Co=256
 
-"スワップファイルを生成しない
+" Disable to generate swapfile.
 set noswapfile
 
-"バックアップファイルを生成しない
+" Disable to generate backupfile.
 set nobackup
 
-"新しいウインドウを右側に開く
+" Open new windows to the right.
 set splitright
 
-"NeoComlCacheを有効化する
+" Enable NeoComplCache
 let g:neocomplcache_enable_at_startup = 1
 
 "検索結果をハイライトする
@@ -82,7 +90,9 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tomasr/molokai'
-
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'cocopon/lightline-hybrid.vim'
+NeoBundle 'tpope/vim-surround'
 
 " My Bundles here:
 "
@@ -94,6 +104,20 @@ filetype plugin indent on     " Required!
 " Installation check.
 NeoBundleCheck
 
-"カラースキームをmolokaiにする
+" Use molokai
 colorscheme molokai
 
+" Configure quickrun
+augroup QuickRunPHPUnit
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *Test.php set filetype=php.phpunit
+augroup END 
+
+augroup QuickRunRSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END 
+
+let g:quickrun_config = {}
+let g:quickrun_config['php.phpunit'] = {'command': 'phpunit'}
+let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
