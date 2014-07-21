@@ -17,50 +17,50 @@ set nobackup
 " Open new windows to the right.
 set splitright
 
-" Enable NeoComplCache
+" Enable NeoComplCache.
 let g:neocomplcache_enable_at_startup = 1
 
-"検索結果をハイライトする
+" Highlight keywords when searching.
 set hlsearch
 
-"シンタックスハイライトを有効にする
+" Enable Syntax Highlight.
 syntax on
 
-"インデントを実行しても選択を解除しない
+" Continue to select when selcted area are indented.
 vnoremap <silent> > >gv
 vnoremap <silent> < <gv
 
-"vimgrepの検索結果を自動的にQuickFixWindowsを開く
+" Open in QuickFixWindow when executing vimgrep
 au QuickfixCmdPost vimgrep cw
 
-"インサートモードを抜けたら自動的にIMEをOFFにする
+" Disable IME when escaping insert mode.
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
-"インサートモードでもh,j,k,lで移動可能にする
+" Enable h,j,k,l keys to move cursor in insert mode.
 imap <c-h> <LEFT>
 imap <c-j> <DOWN>
 imap <c-k> <UP>
 imap <c-l> <Right>
 
-"対応する括弧をハイライトする
+" Highlight corresponding bracket.
 set showmatch
 
-"自動インデントを有効にする
+" Enable autoindent.
 set autoindent
 
-"スマートインデントを有効する
+" Enable smartindent.
 set smartindent
 
-"行番号を表示する
+" Show line number.
 set number
 
-"タブをスペースに置き換える
+" Replace tabs to spaces.
 set expandtab
 
-"タブを2文字分で表示させる
+" Show two spaces instead of a tab.
 set tabstop=2
 
-"自動挿入されるタブを2文字分で表示させる
+" Insert two spaces instead of a tab automatically.
 set shiftwidth=2
 
 "
