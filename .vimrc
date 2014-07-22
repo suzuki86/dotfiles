@@ -1,3 +1,6 @@
+" Configure easymotion.
+nmap s <Plug>(easymotion-s2)
+
 " Use tree view.
 let g:netrw_liststyle = 3
 
