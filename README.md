@@ -1,7 +1,7 @@
 Usage
 ========
 
-First, execute `deploy.sh`.
+Execute `deploy.sh`.
 
 ```sh
 chmod +x dotfiles/deploy.sh
