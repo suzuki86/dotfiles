@@ -96,6 +96,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'kien/ctrlp.vim'
 
 " My Bundles here:
 "
