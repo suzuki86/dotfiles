@@ -1,3 +1,6 @@
+" Enable to toggle relativenumber.
+nnoremap <silent><leader>n :set relativenumber!<cr>
+
 " Configure easymotion.
 nmap s <Plug>(easymotion-s2)
 
