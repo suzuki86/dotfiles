@@ -1,3 +1,33 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Shougo/vimproc'
+Plugin 'thinca/vim-quickrun'
+Plugin 'mattn/emmet-vim'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'itchyny/lightline.vim'
+Plugin 'cocopon/lightline-hybrid.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
+Bundle 'tomasr/molokai'
+
+call vundle#end()
+filetype plugin indent on
+
 " Enable to toggle relativenumber.
 nnoremap <silent><leader>n :set relativenumber!<cr>
 
@@ -71,45 +101,6 @@ set shiftwidth=2
 
 "
 set softtabstop=0
-
-set nocompatible               " Be iMproved
-
-if has('vim_starting')
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'vim-scripts/matchit.zip'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'cocopon/lightline-hybrid.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'kien/ctrlp.vim'
-
-" My Bundles here:
-"
-" Note: You don't set neobundle setting in .gvimrc!
-" Original repos on github
-
-filetype plugin indent on     " Required!
-
-" Installation check.
-NeoBundleCheck
 
 " Use molokai
 colorscheme molokai
