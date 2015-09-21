@@ -119,3 +119,5 @@ augroup END
 let g:quickrun_config = {}
 let g:quickrun_config['php.phpunit'] = {'command': 'phpunit'}
 let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+
+set clipboard=unnamedplus
