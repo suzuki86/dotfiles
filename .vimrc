@@ -12,18 +12,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Shougo/vimproc'
 Plugin 'thinca/vim-quickrun'
 Plugin 'mattn/emmet-vim'
-Plugin 'Shougo/neocomplcache.vim'
-Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'cocopon/lightline-hybrid.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
-Bundle 'tomasr/molokai'
+Plugin 'dracula/vim'
+" Plugin 'tomasr/molokai'
 
 call vundle#end()
 filetype plugin indent on
@@ -103,7 +102,8 @@ set shiftwidth=2
 set softtabstop=0
 
 " Use molokai
-colorscheme molokai
+" colorscheme molokai
+colorscheme dracula
 
 " Configure quickrun
 augroup QuickRunPHPUnit
