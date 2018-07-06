@@ -24,6 +24,10 @@ Plugin 'cocopon/lightline-hybrid.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dracula/vim'
+Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+Plugin 'junegunn/fzf.vim'
 " Plugin 'tomasr/molokai'
 
 call vundle#end()
@@ -123,3 +127,36 @@ let g:quickrun_config['php.phpunit'] = {'command': 'phpunit'}
 let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 
 set clipboard=unnamedplus
+
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
+
+" Enable fzf
+set rtp+=~/.fzf
