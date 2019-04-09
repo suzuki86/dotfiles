@@ -22,12 +22,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'cocopon/lightline-hybrid.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
 Plugin 'dracula/vim'
 Plugin 'm2mdas/phpcomplete-extended'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'junegunn/fzf.vim'
+" Plugin 'kien/ctrlp.vim'
 " Plugin 'tomasr/molokai'
 
 call vundle#end()
@@ -160,3 +160,8 @@ let g:tagbar_type_go = {
 
 " Enable fzf
 set rtp+=~/.fzf
+
+nnoremap <C-p> :FZFFileList<CR>
+command! FZFFileList call fzf#run({
+            \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
+            \ 'sink': 'e'})
