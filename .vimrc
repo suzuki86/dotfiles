@@ -27,6 +27,8 @@ Plugin 'm2mdas/phpcomplete-extended'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'junegunn/fzf.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'fatih/vim-go'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'tomasr/molokai'
 
@@ -165,3 +167,10 @@ nnoremap <C-p> :FZFFileList<CR>
 command! FZFFileList call fzf#run({
             \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
             \ 'sink': 'e'})
+
+" Config for vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray   ctermbg=237
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
+
