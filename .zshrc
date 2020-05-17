@@ -19,5 +19,6 @@ precmd () { vcs_info }
 setopt prompt_subst
 PROMPT="%F{green}%D{%Y-%m-%d %H:%m:%S} %n@%m:%~ "'${vcs_info_msg_0_}'$'\n'">%f "
 
+# Enable to use fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
